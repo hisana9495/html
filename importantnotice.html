@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Announcement</title>
+  <style>
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 20px;
+    }
+    .notice-box {
+      background-color: #fff;
+      border: 1px solid #110a0a;
+      border-radius: 8px;
+      width: 70%;
+      margin: 30px auto;
+      padding: 20px;
+      position: relative;
+      overflow: auto;
+    }
+
+    .notice-box img {
+      float: left;
+      width: 120px;
+      height: 120px;
+      margin-right: 15px;
+      border-radius: 6px;
+    }
+
+    .notice-content {
+      overflow: hidden;
+      padding: 10px 0;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background-color: #05a11d;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Important Notice</h1>
+
+  <div class="notice-box clearfix">
+    <span class="badge">New</span>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi6jAi8zbY_1j7PzBH25q10e6lTa3F0J-5qg&s">
+  <div class="notice-content">
+      <p>
+        Dear Students, <br><br>
+        We are excited to announce that our Annual Sports Day will be held on November 20th at the school playground. 
+        All students are encouraged to participate in various athletic and team events. 
+        Practice sessions will begin next week during activity hours.
+         Let 's show great team spirit and make this event a memorable one!</p>
+    </div>
+  </div>
+</body>
+</html>
