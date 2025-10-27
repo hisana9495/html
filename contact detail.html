@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Contact Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1.5em;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .profile-section {
+      background-color: #fff;
+      width: 80%;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+      overflow: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .profile-section img {
+      float: left;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .employee-info {
+      overflow: hidden;
+    }
+    .employee-info h2 {
+      margin: 0;
+      color: #333;
+    }
+    .employee-info h4 {
+      margin: 5px 0;
+      color: #666;
+    }
+    .employee-info p {
+      color: #444;
+    }
+    .divider {
+      border-left: 2px solid #ccc;
+      height: 130px;
+      position: absolute;
+      right: 220px;
+      top: 40px;
+    }
+    .contact-info {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      background-color: #e8f0fe;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      width: 180px;
+      text-align: center;
+    }
+    .contact-info h3 {
+      margin-top: 0;
+      color: #333;
+    }
+    .contact-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .profile-section {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>Company Contact Card</header>
+  <div class="profile-section">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAMFBMVEXk5ueutLfFycursbXn6eq1ur3h4+SorrHR1Nbd3+DIzM7Bxci4vcCyt7q8wcPMz9GecW8jAAAEDElEQVR4nO2cy5qkIAyFVcJNRd//bRtptbDKsrgk4MIzi+nZ/d/xEAKkp2kePXr06NGjR48ePXqUIwBoGmH//P90AwFo1Q/TNFpNQ69EdS4QamCSMdY62R+YbDsLVhFJD0auPJ6Y5J2uhaW4/ADauUZdgQj09OmRj8Wm0h8RxPDVpZdbfVMSCzS/tGnD4gXNgvmnTRvWXIoKhhCbClON4UyWaipBBUFxekl2BaiuK8GZVwM1VUyedqqelip83R2oFCUV6HifHBXlngNJSFYjIVOXZhRprBI/nqOi+oDAk5lsDSViUulGkVklxgwmm3WSVKmUEkVsVU6iHNRAAJWx9FYJdKb0GrVJ4rdWIvPrtRRR13kxd8KOelp7cBR6s5C79hwU9vpL7g98YfcKGgOK4RYFUBhQEjfp0GeXznZJOipUk106HRRyqxd9sDoV7sE0s23ZxHGdQihTd4UyD1QdqFsGHQcKuaNCqVPYl0J3rOg4e5/E3ftu2SXg9FPYhyww+UjolxwwIUChX1Jl3iQ4oV99YoQKGalBKJ8Ebw8w5/okKS6uc52iuCFOeWvwRXNBLDKtIkBqMqNO9WyUdZdn8O/xnHJSRffkINI3QOTu3FP69T7l4xokZp32GTLxOhb5FPOmxFdI4rmXlFhJ8hEhiG6saF+QV6o5ci6hAFOsVyV8+qdqQ81ibbGRM9AmjEpORDveuUKO8awlHt14F1wM5G02jRWmBefL8SDGCyX8KBCz+eaW5KroPN6BS09mnzx9RYkPuuZYLIBQPWdSLlOxzP09zrrmQKxHptXcdf2sdFN9cngX7KpN4lAaoa3UruVfQlTCg+Wbzd00cmPccPUm247zbQS8IJiLULek+33d+UvQZt5MS+YLkFmifuTtycD3KVlrRuLysMzodyyMxy+k0lYJolIKjVoqZSTRalnLe/ziZYmsR0lAG5cccX/LAGDmwX3dBZcZ0LBA93kmeVhyUiixFwOCSS8sNmb3D6C76NX2SzZcOVTQ9JgubWJsSj8yR5xaYrFklxZ5EFET+rFYbcozG8xUNm1YU2zgQVPatFJFmgWa2KZ/yZhzYf74ZKAYD4fqkAp4AJUJPbBG/g5KJlZQJRVFmcKoRFEiR/VzfDfj/j6d6odX5X0KoMKZs4mnuliDQF/Gv1J9ZYq898XUtyoaf0OOqG9P8TUWnkd1GvbUFyo0qpNY5f2qDgbUyQes+/Ec1WdlL9WtXOnDqIorb9P7+2nueAaOzDHrONNtuXqz6g6JWnRw6iZMfgWtuekd5Y8zVepYTvSK+j1ivoj1O1TtHcbTPoddeyv2Jfec34fpNTBwhy1mE1v/d4WqHeeH1lAVu84IEhfrZlwbxNc6u2cPVjfSVj7n7k6yUH8IXzp9aJXRbQAAAABJRU5ErkJggg==">
+    <div class="employee-info">
+      <h2>Leen</h2>
+      <h4>Software Engineer</h4>
+      <p>
+        Leen is a dedicated software developer with over 5 years of experience 
+        in full-stack web development. He specializes in JavaScript frameworks 
+        and loves creating innovative solutions to modern tech challenges.
+      </p>
+    </div>
+    <div class="divider"></div>
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+      <p>+91 98965 43211</p>
+      <p>Leen24@company.com</p>
+    </div>
+  </div>
+</body>
+</html>
